@@ -46,3 +46,8 @@ erDiagram
         int applied_job_id FK
         date application_date
     }
+| job_id | job_title                 | job_type  | salary | company  |
+| ------ | ------------------------- | --------- | ------ | -------- |
+| 1      | Data Analyst              | Full-time | 250000 | DataTech |
+| 2      | Machine Learning Engineer | Full-time | 400000 | DataTech |
+| 6      | Financial Analyst         | Remote    | 300000 | FinServe |
