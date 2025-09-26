@@ -51,3 +51,9 @@ erDiagram
 | 1      | Data Analyst              | Full-time | 250000 | DataTech |
 | 2      | Machine Learning Engineer | Full-time | 400000 | DataTech |
 | 6      | Financial Analyst         | Remote    | 300000 | FinServe |
+```
+SELECT c.industry, COUNT(*) AS job_count
+FROM company c
+JOIN job_posting j ON c.company_id = j.company_id
+GROUP BY c.industry
+ORDER BY job_count DESC;
