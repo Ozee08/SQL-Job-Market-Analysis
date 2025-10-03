@@ -70,5 +70,21 @@ erDiagram
 - 8 skills (SQL, Python, Excel, Finance, etc.)
 
 - 8 applicants
+| job_id | job_title                 | job_type  | salary | company  |
+| ------ | ------------------------- | --------- | ------ | -------- |
+| 1      | Data Analyst              | Full-time | 250000 | DataTech |
+| 2      | Machine Learning Engineer | Full-time | 400000 | DataTech |
+| 6      | Financial Analyst         | Remote    | 300000 | FinServe |
 
 **This small dataset simulates real-world hiring dynamics while remaining easy to query.**
+
+# Key SQL Queries & Insights
+## 1. Top industries by job postings
+```sql
+SELECT c.industry, COUNT(*) AS job_count
+FROM company c
+JOIN job_posting j ON c.company_id = j.company_id
+GROUP BY c.industry
+ORDER BY job_count DESC;
+
+
