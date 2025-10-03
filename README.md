@@ -88,5 +88,36 @@ FROM company c
 JOIN job_posting j ON c.company_id = j.company_id
 GROUP BY c.industry
 ORDER BY job_count DESC;
+```
+| industry    | job_count |
+| ----------- | --------- |
+| Technology  | 2         |
+| Healthcare  | 1         |
+| Energy      | 1         |
+| Agriculture | 1         |
+| Finance     | 1         |
 
+# ✅ Technology leads with the most postings.
 
+## 2. Most in-demand skills
+```sql
+SELECT s.skill_name, COUNT(*) AS demand
+FROM job_skill js
+JOIN skill s ON js.skill_id = s.skill_id
+GROUP BY s.skill_name
+ORDER BY demand DESC;
+```
+| skill_name         | demand |
+| ------------------ | ------ |
+| SQL                | 3      |
+| Excel              | 3      |
+| Python             | 2      |
+| Data Visualization | 1      |
+| Machine Learning   | 1      |
+| Public Health      | 1      |
+| Agronomy           | 1      |
+| Finance            | 1      |
+
+ # ✅ SQL & Excel are the most required skills.
+
+ 
