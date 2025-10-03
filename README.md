@@ -70,6 +70,8 @@ erDiagram
 - 8 skills (SQL, Python, Excel, Finance, etc.)
 
 - 8 applicants
+
+ 
 | job_id | job_title                 | job_type  | salary | company  |
 | ------ | ------------------------- | --------- | ------ | -------- |
 | 1      | Data Analyst              | Full-time | 250000 | DataTech |
