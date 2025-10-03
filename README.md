@@ -61,3 +61,14 @@ erDiagram
         date application_date
     }
 ```
+# Dataset
+
+- 5 companies (Technology, Healthcare, Energy, Agriculture, Finance)
+
+- 6 job postings (Data Analyst, ML Engineer, etc.)
+
+- 8 skills (SQL, Python, Excel, Finance, etc.)
+
+- 8 applicants
+
+**This small dataset simulates real-world hiring dynamics while remaining easy to query.**
