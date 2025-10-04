@@ -222,3 +222,107 @@ FROM job_posting
 GROUP BY job_title
 ORDER BY avg_salary DESC
 LIMIT 5;
+```
+
+| job_title                 | avg_salary |
+| ------------------------- | ---------- |
+| Machine Learning Engineer | 400000     |
+| Financial Analyst         | 300000     |
+| Data Analyst              | 250000     |
+| Environmental Scientist   | 220000     |
+| Public Health Officer     | 180000     |
+
+**✅ ML Engineer is the highest-paid role.**
+
+## 4. Applicant trends by month
+```sql
+SELECT strftime('%Y-%m', application_date) AS month, COUNT(*) AS applicant_count
+FROM applicant
+GROUP BY month
+ORDER BY month;
+```
+| month   | applicant_count |
+| ------- | --------------- |
+| 2025-01 | 3               |
+| 2025-02 | 4               |
+
+**✅ Applications peaked in February 2025.**
+
+## 5. Company with highest average salaries
+```sql
+SELECT c.company_name, AVG(j.salary) AS avg_salary
+FROM company c
+JOIN job_posting j ON c.company_id = j.company_id
+GROUP BY c.company_name
+ORDER BY avg_salary DESC
+LIMIT 5;
+```
+| company_name | avg_salary |
+| ------------ | ---------- |
+| DataTech Ltd | 325000     |
+| FinServe     | 300000     |
+| EcoEnergy    | 220000     |
+| HealthFirst  | 180000     |
+| AgriPlus     | 150000     |
+
+**✅ DataTech pays the highest salaries on average.**
+
+## 6. Rank jobs by salary within each industry
+```sql
+SELECT c.industry, j.job_title, j.salary,
+       RANK() OVER (PARTITION BY c.industry ORDER BY j.salary DESC) AS rank_in_industry
+FROM job_posting j
+JOIN company c ON j.company_id = c.company_id;
+```
+| industry    | job_title                 | salary | rank_in_industry |
+| ----------- | ------------------------- | ------ | ---------------- |
+| Technology  | Machine Learning Engineer | 400000 | 1                |
+| Technology  | Data Analyst              | 250000 | 2                |
+| Healthcare  | Public Health Officer     | 180000 | 1                |
+| Energy      | Environmental Scientist   | 220000 | 1                |
+| Agriculture | Agronomist                | 150000 | 1                |
+| Finance     | Financial Analyst         | 300000 | 1                |
+
+**✅ ML Engineer ranks #1 in Tech; Data Analyst follows.**
+
+# How to Run
+
+- Open SQLite Online
+ or any SQL editor.
+
+- Copy the script from create_tables.sql → run it.
+
+- Copy the script from insert_data.sql → run it.
+
+- Run the queries from queries.sql to generate insights.
+
+# 📌 Future Improvements
+
+- Expand dataset with 100+ jobs and applicants.
+
+- Add resumes & skill-matching logic.
+
+- Connect to real job market datasets (Kaggle, LinkedIn APIs).
+
+# 🧩 Conclusion
+
+This project demonstrates how SQL can transform raw job market data into actionable insights.
+By designing a normalized relational schema and running analytical queries, we uncovered patterns in industry demand, salary trends, and skill relevance.
+
+It highlights the power of SQL in:
+
+- Understanding workforce and hiring trends,
+
+- Supporting data-driven decisions for job seekers and employers, and
+
+- Serving as a foundation for advanced analytics or dashboard visualization (Power BI, Tableau).
+
+This project not only strengthens SQL and data modeling skills but also serves as a practical portfolio piece for aspiring Data Analysts and Data Engineers. 
+
+# Author
+
+**Duru Chukwuma**
+
+LinkedIn
+
+GitHub Portfolio
