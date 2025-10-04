@@ -175,7 +175,7 @@ erDiagram
 
 **This small dataset simulates real-world hiring dynamics while remaining easy to query.**
 
-# 3 Key SQL Queries & Insights
+# 3. Key SQL Queries & Insights
 ## 1. Top industries by job postings
 ```sql
 SELECT c.industry, COUNT(*) AS job_count
