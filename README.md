@@ -323,6 +323,7 @@ This project not only strengthens SQL and data modeling skills but also serves a
 
 **Duru Chukwuma**
 
-LinkedIn
+📧 chukwuduru588@gmail.com
 
-GitHub Portfolio
+🔗 [LinkedIn](https://linkedin.com/in/chukwuma-duru)  
+🔗 [Portfolio](https://www.datascienceportfol.io/chukwuduru588)
