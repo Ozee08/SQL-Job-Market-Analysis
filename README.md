@@ -1,6 +1,6 @@
 # Job Market Insights SQL Project  
 
-## 📌 Project Overview  
+##  Project Overview  
 This project explores **job market dynamics** using SQL.  
 We simulate a relational database containing companies, job postings, required skills, and applicants.  
 Through structured SQL queries, we uncover insights about **industries, skills demand, salaries, and applicant behavior**.  
@@ -9,7 +9,7 @@ The project is designed as a **portfolio-ready case study** to showcase SQL prof
 
 ---
 
-## 🗂️ Database Schema  
+##  Database Schema  
 
 The database consists of **5 tables**:  
 
@@ -114,7 +114,7 @@ INSERT INTO applicant (name, applied_job_id, application_date) VALUES
 ('Henry John', 2, '2025-02-07'),
 ('Ifeanyi Nwachukwu', 6, '2025-02-22');
 ```
-📊 **Entity Relationship Diagram (ERD):**  
+ **Entity Relationship Diagram (ERD):**  
 
 ```mermaid
 erDiagram
@@ -192,7 +192,7 @@ ORDER BY job_count DESC;
 | Agriculture | 1         |
 | Finance     | 1         |
 
-**✅ Technology leads with the most postings.**
+**Technology leads with the most postings.**
 
 ## 2. Most in-demand skills
 ```sql
@@ -213,7 +213,7 @@ ORDER BY demand DESC;
 | Agronomy           | 1      |
 | Finance            | 1      |
 
-  **✅ SQL & Excel are the most required skills.**
+  **SQL & Excel are the most required skills.**
 
 ## 3. Highest-paying job roles
 ```sql
@@ -232,7 +232,7 @@ LIMIT 5;
 | Environmental Scientist   | 220000     |
 | Public Health Officer     | 180000     |
 
-**✅ ML Engineer is the highest-paid role.**
+**ML Engineer is the highest-paid role.**
 
 ## 4. Applicant trends by month
 ```sql
@@ -246,7 +246,7 @@ ORDER BY month;
 | 2025-01 | 3               |
 | 2025-02 | 4               |
 
-**✅ Applications peaked in February 2025.**
+**Applications peaked in February 2025.**
 
 ## 5. Company with highest average salaries
 ```sql
@@ -265,7 +265,7 @@ LIMIT 5;
 | HealthFirst  | 180000     |
 | AgriPlus     | 150000     |
 
-**✅ DataTech pays the highest salaries on average.**
+**DataTech pays the highest salaries on average.**
 
 ## 6. Rank jobs by salary within each industry
 ```sql
@@ -283,7 +283,7 @@ JOIN company c ON j.company_id = c.company_id;
 | Agriculture | Agronomist                | 150000 | 1                |
 | Finance     | Financial Analyst         | 300000 | 1                |
 
-**✅ ML Engineer ranks #1 in Tech; Data Analyst follows.**
+**ML Engineer ranks #1 in Tech; Data Analyst follows.**
 
 # How to Run
 
@@ -296,7 +296,7 @@ JOIN company c ON j.company_id = c.company_id;
 
 - Run the queries from queries.sql to generate insights.
 
-# 📌 Future Improvements
+#  Future Improvements
 
 - Expand dataset with 100+ jobs and applicants.
 
@@ -304,7 +304,7 @@ JOIN company c ON j.company_id = c.company_id;
 
 - Connect to real job market datasets (Kaggle, LinkedIn APIs).
 
-# 🧩 Conclusion
+#  Conclusion
 
 This project demonstrates how SQL can transform raw job market data into actionable insights.
 By designing a normalized relational schema and running analytical queries, we uncovered patterns in industry demand, salary trends, and skill relevance.
@@ -323,7 +323,7 @@ This project not only strengthens SQL and data modeling skills but also serves a
 
 **Duru Chukwuma**
 
-📧 chukwuduru588@gmail.com
+ chukwuduru588@gmail.com
 
 🔗 [LinkedIn](https://linkedin.com/in/chukwuma-duru)  
 🔗 [Portfolio](https://www.datascienceportfol.io/chukwuduru588)
